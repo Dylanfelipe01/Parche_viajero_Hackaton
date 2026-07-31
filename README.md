@@ -1,1 +1,3 @@
-# Viajes_Plus_Hackaton
+Parcheviajero
+El Problema es viajar por Colombia o salir de vacaciones a veces se vuelve un dolor de cabeza: páginas con costos ocultos, procesos de reserva complejos y precios por las nubes. Muchas personas terminan abandonando la idea de viajar o pagando de más por no entender plataformas complicadas.
+Nuestra Solución es una landing page de viajes sencilla, accesible y 100% colombiana. Diseñada para que cualquier persona sin importar su edad o qué tan familiarizada esté con la tecnología pueda encontrar un buen viaje al mejor precio, entenderlo al instante y reservarlo en un par de clics.

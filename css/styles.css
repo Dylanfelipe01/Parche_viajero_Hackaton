@@ -1,4 +1,13 @@
 @import url(variable.css);
+@import url(card.css);
+@import url(footer.css);
+@import url(hero.css);
+@import url(navbar.css);
+@import url(opiniones.css);
+@import url(packages.css);
+@import url(responsive.css);
+
+
 body{
     background-color: var(--background);
     color: var(--text-dark);

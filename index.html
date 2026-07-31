@@ -7,6 +7,7 @@
     <title>Parche viajero - inicio</title>
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/footer.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link
@@ -169,4 +170,818 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
+=======
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+
+    <div class="container">
+
+        <!-- Logo -->
+
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+
+            <img src="assets/parche viajero.svg"
+                alt="Parche Viajero"
+                class="logo me-2">
+
+            <span class="logo-text">
+                ParcheViajero
+            </span>
+
+        </a>
+
+        <button class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menu">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="menu">
+
+            <ul class="navbar-nav mx-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html">
+                        Inicio
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        Super Ofertas
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        Planes
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="contacto.html">
+                        Contacto
+                    </a>
+                </li>
+
+            </ul>
+
+            <div class="d-flex align-items-center">
+
+                <a href="#" class="icon-navbar me-4">
+
+                    <i class="bi bi-person-circle"></i>
+
+                </a>
+
+                <a href="#" class="icon-navbar position-relative me-4">
+
+                    <i class="bi bi-cart3"></i>
+
+                    <span class="badge bg-danger position-absolute top-0 start-100 translate-middle">
+                        2
+                    </span>
+
+                </a>
+
+                <a href="#" class="btn btn-warning btn-reserva">
+
+                    Reserva Aquí
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</nav>
+    <!-- ================= NAVBAR ================= -->
+
+    <!-- ================= HERO ================= -->
+
+
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-6">
+
+                <span class="badge bg-warning text-dark mb-3">
+                    ✈️ Las mejores ofertas
+                </span>
+
+                <h1 class="display-4 fw-bold">
+                    Encuentra vuelos baratos para tu próximo destino
+                </h1>
+
+                <p class="lead text-muted my-4">
+                    Comparamos cientos de aerolíneas y agencias para ayudarte
+                    a encontrar el mejor precio en segundos.
+                </p>
+
+            </div>
+
+            <div class="col-lg-6 text-center">
+
+                <img src="assets/banner.png" class="img-fluid hero-img" alt="Banner">
+
+            </div>
+
+        </div>
+
+    </div>
+
+    </section>
+    <!-- ================= HERO ================= -->
+
+    <!-- ================= BUSCADOR ================= -->
+
+    <section class="search-section">
+
+        <div class="container">
+
+            <div class="card shadow-lg border-0 p-4">
+
+                <div class="row gy-3 align-items-end">
+
+                    <!-- Filtros -->
+
+                    <div class="col-lg-3">
+
+                        <label class="form-label fw-bold">
+
+                            Categoría
+
+                        </label>
+
+                        <select class="form-select">
+
+                            <option>Todos</option>
+                            <option>Playa</option>
+                            <option>Montaña</option>
+                            <option>Nacional</option>
+                            <option>Internacional</option>
+
+                        </select>
+
+                    </div>
+
+                    <!-- Destino -->
+
+                    <div class="col-lg-2">
+
+                        <label class="form-label fw-bold">
+
+                            Destino
+
+                        </label>
+
+                        <input type="text" class="form-control" placeholder="Destino">
+
+                    </div>
+
+                    <!-- Salida -->
+
+                    <div class="col-lg-2">
+
+                        <label class="form-label fw-bold">
+
+                            Salida
+
+                        </label>
+
+                        <input type="date" class="form-control">
+
+                    </div>
+
+                    <!-- Regreso -->
+
+                    <div class="col-lg-2">
+
+                        <label class="form-label fw-bold">
+
+                            Regreso
+
+                        </label>
+
+                        <input type="date" class="form-control">
+
+                    </div>
+
+                    <!-- Integrantes -->
+
+                    <div class="col-lg-2">
+
+                        <label class="form-label fw-bold">
+
+                            Integrantes
+
+                        </label>
+
+                        <input type="number" class="form-control" placeholder="1">
+
+                    </div>
+
+                    <!-- Botón -->
+
+                    <div class="col-lg-1 d-grid">
+
+                        <button class="btn btn-warning">
+
+                            Buscar
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ================= BUSCADOR ================= -->
+
+
+
+    <!-- ================= SUPER OFERTAS ================= -->
+
+    <section class="py-5" id="ofertas">
+
+        <div class="container">
+
+            <div class="text-center mb-5">
+
+                <h2 class="fw-bold">Super Ofertas</h2>
+
+                <p class="text-muted">Descubre los destinos más buscados por nuestros viajeros.</p>
+
+            </div>
+
+            <div class="row g-4">
+
+                <!-- Card 1 -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="card h-100 shadow border-0">
+
+                        <img src="assets/images/oferta1.jpg" class="card-img-top">
+
+                        <div class="card-body">
+
+                            <span class="badge bg-warning text-dark mb-2">Super Oferta</span>
+
+                            <h5 class="card-title"> Cartagena</h5>
+
+                            <p class="card-text">Disfruta de las mejores playas del Caribe colombiano.</p>
+
+                            <h4 class="text-primary">$799.900</h4>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Card 2 -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="card h-100 shadow border-0">
+
+                        <img src="assets/images/oferta2.jpg" class="card-img-top">
+
+                        <div class="card-body">
+
+                            <span class="badge bg-success"> Más Cotizado</span>
+
+                            <h5 class="mt-2">San Andrés</h5>
+
+                            <p>Mar de los siete colores y hoteles todo incluido.</p>
+
+                            <h4 class="text-primary">$1.199.900</h4>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Card 3 -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="card h-100 shadow border-0">
+
+                        <img src="assets/images/oferta3.jpg" class="card-img-top">
+
+                        <div class="card-body">
+
+                            <span class="badge bg-info"> Relajado</span>
+
+                            <h5 class="mt-2"> Santa Marta</h5>
+
+                            <p> Naturaleza, playas y tranquilidad en un solo lugar.</p>
+
+                            <h4 class="text-primary">$699.900</h4>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Card 4 -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="card h-100 shadow border-0">
+
+                        <img src="assets/images/oferta4.jpg" class="card-img-top">
+
+                        <div class="card-body">
+
+                            <span class="badge bg-danger"> Nuevo Destino </span>
+
+                            <h5 class="mt-2"> Cancún</h5>
+
+                            <p> Vive unas vacaciones inolvidables en México.</p>
+
+                            <h4 class="text-primary">
+                                $2.399.900
+                            </h4>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Card 5 -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="card h-100 shadow border-0">
+
+                        <img src="assets/images/oferta5.jpg" class="card-img-top">
+
+                        <div class="card-body">
+
+                            <span class="badge bg-dark">Más Exclusivo </span>
+
+                            <h5 class="mt-2">
+                                Punta Cana</h5>
+
+                            <p> Resorts de lujo frente al mar Caribe.</p>
+
+                            <h4 class="text-primary">$2.899.900</h4>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Card 6 -->
+
+                <div class="col-lg-4 col-md-6">
+
+                    <div class="card h-100 shadow border-0">
+
+                        <img src="assets/images/oferta6.jpg" class="card-img-top">
+
+                        <div class="card-body">
+
+                            <span class="badge bg-primary"> Más Reservado </span>
+
+                            <h5 class="mt-2">Eje Cafetero</h5>
+
+                            <p>Paisajes increíbles y cultura cafetera.</p>
+
+                            <h4 class="text-primary">$899.900</h4>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ================= SUPER OFERTAS ================= -->
+
+    <!-- ================= EXPERIENCIAS ================= -->
+
+    <section class="py-5 bg-light">
+
+        <div class="container">
+
+            <div class="text-center">
+
+                <h2 class="fw-bold mb-3">
+                    Sin necesidad de carro ofrecemos aventuras inolvidables
+                </h2>
+
+                <p class="text-muted mb-5">
+                    Tenemos experiencias para todos los gustos.
+                </p>
+
+            </div>
+
+            <div class="row text-center g-4">
+
+                <div class="col">
+                    <i class="bi bi-bus-front-fill display-4 text-warning"></i>
+                    <h6 class="mt-3">Transporte</h6>
+                </div>
+
+                <div class="col">
+                    <i class="bi bi-tree-fill display-4 text-success"></i>
+                    <h6 class="mt-3">Naturaleza</h6>
+                </div>
+
+                <div class="col">
+                    <i class="bi bi-water display-4 text-info"></i>
+                    <h6 class="mt-3">Playa</h6>
+                </div>
+
+                <div class="col">
+                    <i class="bi bi-bicycle display-4 text-primary"></i>
+                    <h6 class="mt-3">Aventura</h6>
+                </div>
+
+                <div class="col">
+                    <i class="bi bi-airplane-engines-fill display-4 text-secondary"></i>
+                    <h6 class="mt-3">Vuelos</h6>
+                </div>
+
+                <div class="col">
+                    <i class="bi bi-fire display-4 text-danger"></i>
+                    <h6 class="mt-3">Experiencias</h6>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ================= EXPERIENCIAS ================= -->
+
+
+    <!-- ================= TESTIMONIOS ================= -->
+
+    <section class="py-5">
+
+        <div class="container">
+
+            <div class="text-center mb-5">
+
+                <h2 class="fw-bold">Lo que dicen nuestros viajeros</h2>
+
+            </div>
+
+            <div class="row g-4">
+
+                <div class="col-lg-4">
+
+                    <div class="card shadow border-0 h-100">
+
+                        <div class="card-body">
+
+                            <i class="bi bi-person-circle display-4"></i>
+
+                            <h5 class="mt-3">Laura Gómez</h5>
+
+                            <p class="text-warning">★★★★★</p>
+
+                            <p>"Excelente servicio, encontré un viaje a San Andrés mucho más económico de lo que
+                                esperaba."</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4">
+
+                    <div class="card shadow border-0 h-100">
+
+                        <div class="card-body">
+
+                            <i class="bi bi-person-circle display-4"></i>
+
+                            <h5 class="mt-3">Andrés Ruiz</h5>
+
+                            <p class="text-warning">★★★★★</p>
+
+                            <p>"Muy fácil reservar. Todo el proceso fue rápido y seguro."</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4">
+
+                    <div class="card shadow border-0 h-100">
+
+                        <div class="card-body">
+
+                            <i class="bi bi-person-circle display-4"></i>
+
+                            <h5 class="mt-3">
+                                Camila Torres
+                            </h5>
+
+                            <p class="text-warning">
+                                ★★★★★
+                            </p>
+
+                            <p>
+                                "Las promociones son increíbles. Definitivamente volveré a viajar con Parche Viajero."
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ================= TESTIMONIOS ================= -->
+
+
+    <!-- ================= CONTACTO ================= --> <!-- este apartado esta redirigir a la persona a la reserva-->
+
+    <section class="py-5 bg-warning-subtle">
+
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-6">
+
+                    <h2 class="fw-bold">
+                        ¿Listo para tu próxima aventura?
+                    </h2>
+
+                    <p class="text-muted mt-3">
+                        Encuentra vuelos, hoteles y experiencias al mejor precio.
+                        Nuestro equipo está listo para ayudarte a planear el viaje perfecto.
+                    </p>
+
+                </div>
+
+                <div class="col-lg-6 text-lg-end mt-4 mt-lg-0">
+
+                    <a href="#" class="btn btn-warning btn-lg px-5">
+                        Reservar Ahora
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ================= CONTACTO ================= -->
+
+    <!-- ===================== MEDIOS DE PAGO ===================== -->
+
+    <section class="py-5 bg-light">
+
+        <div class="container">
+
+            <div class="text-center mb-5">
+
+                <h2 class="fw-bold">
+                    Paga como prefieras
+                </h2>
+
+                <p class="text-muted">
+                    Aceptamos múltiples medios de pago para hacer tu reserva fácil y segura.
+                </p>
+
+            </div>
+
+            <div id="paymentCarousel" class="carousel slide" data-bs-ride="carousel">
+
+                <div class="carousel-inner">
+
+                    <!-- Slide 1 -->
+
+                    <div class="carousel-item active">
+
+                        <div class="row justify-content-center align-items-center text-center">
+
+                            <div class="col">
+                                <img src="assets/images/payments/visa.png" class="payment-logo">
+                            </div>
+
+                            <div class="col">
+                                <img src="assets/images/payments/mastercard.png" class="payment-logo">
+                            </div>
+
+                            <div class="col">
+                                <img src="assets/images/payments/amex.png" class="payment-logo">
+                            </div>
+
+                            <div class="col">
+                                <img src="assets/images/payments/nequi.png" class="payment-logo">
+                            </div>
+
+                            <div class="col">
+                                <img src="assets/images/payments/daviplata.png" class="payment-logo">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Slide 2 -->
+
+                    <div class="carousel-item">
+
+                        <div class="row justify-content-center align-items-center text-center">
+
+                            <div class="col">
+                                <img src="assets/images/payments/pse.png" class="payment-logo">
+                            </div>
+
+                            <div class="col">
+                                <img src="assets/images/payments/paypal.png" class="payment-logo">
+                            </div>
+
+                            <div class="col">
+                                <img src="assets/images/payments/applepay.png" class="payment-logo">
+                            </div>
+
+                            <div class="col">
+                                <img src="assets/images/payments/googlepay.png" class="payment-logo">
+                            </div>
+
+                            <div class="col">
+                                <img src="assets/images/payments/mercadopago.png" class="payment-logo">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#paymentCarousel"
+                    data-bs-slide="prev">
+
+                    <span class="carousel-control-prev-icon"></span>
+
+                </button>
+
+                <button class="carousel-control-next" type="button" data-bs-target="#paymentCarousel"
+                    data-bs-slide="next">
+
+                    <span class="carousel-control-next-icon"></span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer-container py-4">
+        <div class="container-fluid px-4">
+            <div class="row align-items-center g-3 mb-4">
+                <!--Imagen Parcheviajero-->
+                <div
+                    class="col-xl-3 col-lg-3 col-md-6 d-flex flex-column justify-content-center align-items-center text-center h-100">
+                    <img src="../assets/parcheviajero.png" alt="Parche Viajero" class="img-fluid"
+                        style="max-height: 250px;">
+            <div class="row align-items-center g-3">
+                <!--Imagen de parcheviajero-->
+                <div class="col-xl-3 col-lg-3 col-md-6 text-center">
+                    <div class="d-flex align-items-center justify-content-center mb-2">
+                        <!--Titulo al lado de la imagen-->
+                        <img src="assets/parche viajero.svg" alt="Parche Viajero" class="img-fluid me-2"
+                            style="max-height: 150px;">
+
+                    </div>
+                    <p class="text-muted fs-5 mb-0">Encuéntranos y entiende la experiencia</p>
+                </div>
+
+                <!-- Políticas -->
+                <div class="col-xl-3 col-lg-3 col-md-6">
+                    <div class="card card-footer-custom p-3 border-0 h-100 text-center">
+                        <h5 class="fw-bold mb-2 text-center">Políticas</h5>
+                        <ul class="list-unstyled small mb-0 ps-3" style="list-style-type: disc;">
+                            <li>
+                                <a href="https://marketing4ecommerce.co/aviso-legal/" target="_blank"
+                                    rel="noopener noreferrer" class="text-secondary-custom">Aviso legal.</a>
+                            </li>
+                            <!--Links de politicas-->
+                            <li>
+                                <a href="https://sedeelectronica.sic.gov.co/politica-de-tratamiento-de-datos-personales"
+                                    target="_blank" rel="noopener noreferrer" class="text-secondary-custom">Políticas de
+                                    privacidad.</a>
+                            </li>
+                            <li>
+                                <a href="https://www.riohacha-laguajira.gov.co/Style%20Library/PDFs/Politicas%20de%20Cookies%20-%20Ley%201581%20de%202012.pdf"
+                                    target="_blank" rel="noopener noreferrer" class="text-secondary-custom">Políticas de
+                                    cookies.</a>
+                            </li>
+                            <li>
+                                <a href="https://www.mincit.gov.co/minindustria/estrategia-transversal/regulacion/proteccion-del-consumidor"
+                                    target="_blank" rel="noopener noreferrer" class="text-secondary-custom">Políticas de
+                                    garantía.</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Contacto -->
+                <div class="col-xl-3 col-lg-3 col-md-6">
+                    <div class="card card-footer-custom p-3 border-0 h-100 text-center">
+                        <h5 class="fw-bold mb-2 text-center">Parchemos Juntos</h5>
+                        <div class="small text-muted ps-2">
+                            <p class="mb-1"><strong>Escríbenos:</strong> ParcheViajer@gmail.com</p>
+                            <p class="mb-1"><strong>Teléfono:</strong> 323-897-6543</p>
+                            <p class="mb-0"><strong>Dirección:</strong> calle 45 #38 - 54 Bogotá DC</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Desarrolladores -->
+                <div class="col-xl-3 col-lg-3 col-md-6">
+                    <div class="card card-footer-custom p-3 border-0 h-100 text-center">
+                        <h5 class="fw-bold mb-3 text-dark">Desarrolladores</h5>
+                        <div
+                            class="d-flex flex-row flex-wrap justify-content-center align-items-center gap-2 small text-muted">
+                            <span class="text-nowrap"><i class="bi bi-code-slash text-primary me-1"></i>Jonathan
+                                Paul</span>
+                            <span class="text-nowrap"><i class="bi bi-code-slash text-primary me-1"></i>Camilo
+                                Bermeo</span>
+                            <span class="text-nowrap"><i class="bi bi-code-slash text-primary me-1"></i>Santiago
+                                Garcia</span>
+                            <span class="text-nowrap"><i class="bi bi-code-slash text-primary me-1"></i>Samuel
+                                Cuervo</span>
+                            <span class="text-nowrap"><i class="bi bi-code-slash text-primary me-1"></i>Dylan
+                                Puentes</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center align-items-center gap-2">
+                    <a href="#"
+                        class="social-circle shadow-sm d-flex align-items-center justify-content-center text-dark text-decoration-none">
+                        <i class="bi bi-facebook fs-5"></i>
+                    </a>
+                    <a href="#"
+                        class="social-circle shadow-sm d-flex align-items-center justify-content-center text-dark text-decoration-none">
+                        <i class="bi bi-instagram fs-5"></i>
+                    </a>
+                    <a href="#"
+                        class="social-circle shadow-sm d-flex align-items-center justify-content-center text-dark text-decoration-none">
+                        <i class="bi bi-twitter-x fs-5"></i>
+                    </a>
+                    <a href="#"
+                        class="social-circle shadow-sm d-flex align-items-center justify-content-center text-dark text-decoration-none">
+                        <i class="bi bi-whatsapp fs-5"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+    <!-- ================= FOOTER ================= -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
 </html>
