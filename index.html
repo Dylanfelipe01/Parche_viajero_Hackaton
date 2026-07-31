@@ -9,24 +9,164 @@
     <link rel="stylesheet" href="./css/navbar.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <header>
         <nav class="navbar navbar-expand-lg fixed-top py-3">
-            <div class="container"> <a class="navbar-brand" href="index.html"> <img src="assets/logos/logo.png"
-                        alt="Cumbre Camp" class="img-fluid logo"> </a> <button
-                    class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú"> <i
-                        class="bi bi-list fs-2"></i> </button>
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/logos/logo.png" alt="Cumbre Camp" class="img-fluid logo">
+                </a>
+                <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+                    <i class="bi bi-list fs-2"></i>
+                </button>
                 <div class="collapse navbar-collapse justify-content-end" id="menu">
                     <ul class="navbar-nav align-items-lg-center gap-lg-4">
                         <li class="nav-item"> <a class="nav-link active" href="#hero"> Inicio </a> </li>
                         <li class="nav-item"> <a class="nav-link" href="#explorar"> Explorar </a> </li>
                         <li class="nav-item"> <a class="nav-link" href="#destinos"> Destinos </a> </li>
                         <li class="nav-item"> <a class="nav-link" href="#experiencias"> Experiencias </a> </li>
-                        <li class="nav-item"> <a class="nav-link" href="#alojamientos"> Alojamientos </a> </li>    
-    
+                        <li class="nav-item"> <a class="nav-link" href="#alojamientos"> Alojamientos </a> </li>
+                    </ul>
+                </div>
+                <button class="btn btn-primary position-relative" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#sidebar-carrito" aria-controls="sidebar-carrito">
+                    <img src="./assets/shopping-cart.svg" alt="Carrito de reservas">
+                    
+                    <!-- circulo rojo donde van la cantidad de items en el carrito -->
+                    <span id="badge-contador-carrito" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        0
+                        <span class="visually-hidden">Reservas en el carrito</span>
+                    </span>
+                </button>
+            </div>
+        </nav>
+    </header>
+    <!----------------------------------- Sidebard Carrito by Camilo---------------------------------------->
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="sidebar-carrito" aria-labelledby="titulo-sidebar-carrito">
+        
+        <!-- ENCABEZADO DEL CARRITO -->
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title fw-bold" id="titulo-sidebar-carrito">
+                Mis Reservas (<span id="texto-cantidad-items">0</span>)
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+        </div>
+
+        <!-- CUERPO DEL CARRITO (Flexbox vertical para separar la lista del resumen fijo) -->
+        <div class="offcanvas-body d-flex flex-column p-0">
+            
+            <!-- CONTENEDOR DINÁMICO DE ITEMS -->
+            <!-- Aquí JS renderizará la lista de productos/reservas agregadas. Tiene scroll independiente (overflow-y-auto) -->
+            <div id="contenedor-items-carrito" class="flex-grow-1 overflow-y-auto p-3">
+                
+                <!-- PLANTILLA BASE DE UN ITEM (Sirve como referencia visual y para duplicar desde JS) -->
+                <div class="card mb-3 border-0 shadow-sm item-carrito" id="item-reserva-1">
+                    <div class="row g-0 align-items-center">
+                        <!-- Imagen de la experiencia o destino -->
+                        <div class="col-4">
+                            <img src="https://cdn.pixabay.com/photo/2016/11/18/18/39/beach-1836335_1280.jpg"
+                                class="img-fluid rounded-start h-100 object-fit-cover" alt="Parche Barranquilla">
+                        </div>
+                        
+                        <!-- Detalles de la reserva -->
+                        <div class="col-8">
+                            <div class="card-body p-2 position-relative">
+                                <!-- Botón para eliminar esta reserva individual (Con atributo data-id para JS) -->
+                                <button type="button" class="btn-close position-absolute top-0 end-0 m-2 btn-eliminar-item" 
+                                    aria-label="Eliminar reserva" data-id-reserva="1"></button>
+
+                                <h6 class="card-title fw-bold mb-1 pe-4" id="nombre-reserva-1">Parche Barranquilla</h6>
+                                <p class="card-text small text-muted mb-1">
+                                    <i class="bi bi-calendar-event me-1"></i><span id="fecha-reserva-1">15 Ago 2026</span>
+                                </p>
+                                
+                                <div class="d-flex justify-content-between align-items-center mt-2">
+                                    <!-- Control de cantidad de cupos / personas -->
+                                    <div class="input-group input-group-sm w-auto">
+                                        <button class="btn btn-outline-secondary btn-restar-cupo" type="button" data-id-reserva="1">-</button>
+                                        <span class="input-group-text bg-white px-2 fw-semibold" id="cantidad-cupos-1">1</span>
+                                        <button class="btn btn-outline-secondary btn-sumar-cupo" type="button" data-id-reserva="1">+</button>
+                                    </div>
+                                    
+                                    <!-- Subtotal del ítem -->
+                                    <span class="fw-bold text-primary" id="precio-reserva-1">$150.000</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- FIN PLANTILLA ITEM -->
+
+            </div>
+
+            <!-- RESUMEN DE COMPRA Y BOTÓN DE PAGO (Fijo en la parte inferior del sidebar) -->
+            <div class="border-top p-3 bg-light shadow-lg">
+                <h6 class="fw-bold mb-3">Resumen de la reserva</h6>
+                
+                <div class="d-flex justify-content-between mb-2">
+                    <span class="text-muted">Subtotal:</span>
+                    <span class="fw-semibold" id="resumen-subtotal">$150.000</span>
+                </div>
+                <div class="d-flex justify-content-between mb-2">
+                    <span class="text-muted">Cargos de servicio (10%):</span>
+                    <span class="fw-semibold" id="resumen-cargos">$15.000</span>
+                </div>
+                
+                <hr class="my-2">
+                
+                <div class="d-flex justify-content-between mb-3 fs-5">
+                    <span class="fw-bold">Total a pagar:</span>
+                    <span class="fw-bold text-success" id="resumen-total">$165.000</span>
+                </div>
+
+                <!-- Botón de Pago de la Reserva -->
+                <button type="button" class="btn btn-primary w-100 py-2 fw-bold text-uppercase" id="boton-pagar-reserva">
+                    <i class="bi bi-credit-card-fill me-2"></i>Proceder al Pago
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+<div class="container my-4">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm">
+                <!-- Imagen del paquete -->
+                <img src="https://cdn.pixabay.com/photo/2016/11/18/18/39/beach-1836335_1280.jpg" 
+                    class="card-img-top object-fit-cover" style="height: 200px;" alt="Cartagena">
+                
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title fw-bold">Cartagena</h5>
+                    <p class="card-text text-muted small flex-grow-1">
+                        Ideal para disfrutar del mar Caribe, el centro histórico y una experiencia relajante.
+                    </p>
+                    
+                    <div class="d-flex justify-content-between align-items-center mt-3">
+                        <span class="fs-5 fw-bold text-primary">$590.000</span>
+                        
+                        <!-- Botón para agregar: El data-id="1" coincide con el ID del arreglo "paquetes" -->
+                        <button class="btn btn-primary btn-agregar-carrito" data-id="1">
+                            <i class="bi bi-cart-plus me-1"></i> Agregar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!----------------------------------- Fin Sidebard Carrito by Camilo---------------------------------------->
+    <script src="./js/localstorage.js"></script>
+    <script src="./js/cart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
