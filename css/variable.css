@@ -1,0 +1,21 @@
+:root {
+  /* ===== Colores principales ===== */
+  --primary: #0D6EFD;
+  --primary-dark: #003566;
+  --secondary: #FFC300;
+  --accent: #2ECC71;
+  /* ===== Colores neutros ===== */
+  --background: #F8F9FA;
+  --surface: #FFFFFF;
+  --text-dark: #212529;
+  --text-light: #6C757D;
+  --border: #DEE2E6;
+  /* ===== Estados ===== */
+  --success: #198754;
+  --warning: #FFC107;
+  --danger: #DC3545;
+  /* ===== Sombras ===== */
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  /* ===== Bordes ===== */
+  --radius: 12px;
+}
