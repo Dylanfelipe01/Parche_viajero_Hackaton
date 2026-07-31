@@ -19,33 +19,28 @@
 
     <!-- ================= NAVBAR ================= -->
 
-    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
 
     <div class="container">
 
         <!-- Logo -->
-        <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
 
             <img src="assets/parche viajero.svg"
                 alt="Parche Viajero"
-                width="55"
-                class="me-2">
+                class="logo me-2">
 
-<<<<<<< HEAD
-            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
-=======
-            ParcheViajero
->>>>>>> santiago
+            <span class="logo-text">
+                ParcheViajero
+            </span>
 
         </a>
 
         <button class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#menu"
-            aria-controls="menu"
-            aria-expanded="false"
-            aria-label="Abrir menú">
+            data-bs-target="#menu">
 
             <span class="navbar-toggler-icon"></span>
 
@@ -56,7 +51,7 @@
             <ul class="navbar-nav mx-auto">
 
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">
+                    <a class="nav-link active" href="index.html">
                         Inicio
                     </a>
                 </li>
@@ -74,32 +69,34 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link active" href="contacto.html">
+                    <a class="nav-link" href="contacto.html">
                         Contacto
-                    </a>
-                </li>
-
-                <li class="nav-item ms-lg-3">
-                    <a class="btn btn-warning" href="#">
-                        Reserva Aquí
                     </a>
                 </li>
 
             </ul>
 
-            <div class="d-flex align-items-center gap-3">
+            <div class="d-flex align-items-center">
 
-                <a href="#" class="text-dark fs-4">
+                <a href="#" class="icon-navbar me-4">
+
                     <i class="bi bi-person-circle"></i>
+
                 </a>
 
-                <a href="#" class="text-dark fs-4 position-relative">
+                <a href="#" class="icon-navbar position-relative me-4">
 
                     <i class="bi bi-cart3"></i>
 
-                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    <span class="badge bg-danger position-absolute top-0 start-100 translate-middle">
                         2
                     </span>
+
+                </a>
+
+                <a href="#" class="btn btn-warning btn-reserva">
+
+                    Reserva Aquí
 
                 </a>
 
@@ -729,6 +726,16 @@
                     class="col-xl-3 col-lg-3 col-md-6 d-flex flex-column justify-content-center align-items-center text-center h-100">
                     <img src="../assets/parcheviajero.png" alt="Parche Viajero" class="img-fluid"
                         style="max-height: 250px;">
+            <div class="row align-items-center g-3">
+                <!--Imagen de parcheviajero-->
+                <div class="col-xl-3 col-lg-3 col-md-6 text-center">
+                    <div class="d-flex align-items-center justify-content-center mb-2">
+                        <!--Titulo al lado de la imagen-->
+                        <img src="assets/parche viajero.svg" alt="Parche Viajero" class="img-fluid me-2"
+                            style="max-height: 150px;">
+
+                    </div>
+                    <p class="text-muted fs-5 mb-0">Encuéntranos y entiende la experiencia</p>
                 </div>
 
                 <!-- Políticas -->
