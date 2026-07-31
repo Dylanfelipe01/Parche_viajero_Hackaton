@@ -11,22 +11,887 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg fixed-top py-3">
-            <div class="container"> <a class="navbar-brand" href="index.html"> <img src="assets/logos/logo.png"
-                        alt="Cumbre Camp" class="img-fluid logo"> </a> <button
-                    class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú"> <i
-                        class="bi bi-list fs-2"></i> </button>
-                <div class="collapse navbar-collapse justify-content-end" id="menu">
-                    <ul class="navbar-nav align-items-lg-center gap-lg-4">
-                        <li class="nav-item"> <a class="nav-link active" href="#hero"> Inicio </a> </li>
-                        <li class="nav-item"> <a class="nav-link" href="#explorar"> Explorar </a> </li>
-                        <li class="nav-item"> <a class="nav-link" href="#destinos"> Destinos </a> </li>
-                        <li class="nav-item"> <a class="nav-link" href="#experiencias"> Experiencias </a> </li>
-                        <li class="nav-item"> <a class="nav-link" href="#alojamientos"> Alojamientos </a> </li>    
-    
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+
+        <div class="container">
+
+            <!-- Logo -->
+
+            <a class="navbar-brand fw-bold" href="#">
+                <img src="assets/parche viajero.svg" width="55">
+                ParcheViajero
+            </a>
+
+            <button class="navbar-toggler"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="navbar-nav mx-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            Super Ofertas
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            Planes
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            Contacto
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="btn btn-warning ms-lg-3">
+                            Reserva Aquí
+                        </a>
+                    </li>
+
+                </ul>
+
+                <div class="d-flex align-items-center gap-3">
+
+                    <a href="#" class="text-dark fs-4">
+                        <i class="bi bi-person-circle"></i>
+                    </a>
+
+                    <a href="#" class="text-dark fs-4 position-relative">
+
+                        <i class="bi bi-cart3"></i>
+
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+
+                            2
+
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <!-- ================= HERO ================= -->
+
+
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-6">
+
+                <span class="badge bg-warning text-dark mb-3">
+                    ✈️ Las mejores ofertas
+                </span>
+
+                <h1 class="display-4 fw-bold">
+                    Encuentra vuelos baratos para tu próximo destino
+                </h1>
+
+                <p class="lead text-muted my-4">
+                    Comparamos cientos de aerolíneas y agencias para ayudarte
+                    a encontrar el mejor precio en segundos.
+                </p>
+
+            </div>
+
+            <div class="col-lg-6 text-center">
+
+                <img
+                    src="assets/banner.png"
+                    class="img-fluid hero-img"
+                    alt="Banner">
+
+            </div>
+
+        </div>
+
+    </div>
+
+        </section>
+<!-- ================= HERO ================= -->
+
+    <!-- ================= BUSCADOR ================= -->
+
+    <section class="search-section">
+
+        <div class="container">
+
+            <div class="card shadow-lg border-0 p-4">
+
+                <div class="row gy-3 align-items-end">
+
+                    <!-- Filtros -->
+
+                    <div class="col-lg-3">
+
+                        <label class="form-label fw-bold">
+
+                            Categoría
+
+                        </label>
+
+                        <select class="form-select">
+
+                            <option>Todos</option>
+                            <option>Playa</option>
+                            <option>Montaña</option>
+                            <option>Nacional</option>
+                            <option>Internacional</option>
+
+                        </select>
+
+                    </div>
+
+                    <!-- Destino -->
+
+                    <div class="col-lg-2">
+
+                        <label class="form-label fw-bold">
+
+                            Destino
+
+                        </label>
+
+                        <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Destino">
+
+                    </div>
+
+                    <!-- Salida -->
+
+                    <div class="col-lg-2">
+
+                        <label class="form-label fw-bold">
+
+                            Salida
+
+                        </label>
+
+                        <input
+                            type="date"
+                            class="form-control">
+
+                    </div>
+
+                    <!-- Regreso -->
+
+                    <div class="col-lg-2">
+
+                        <label class="form-label fw-bold">
+
+                            Regreso
+
+                        </label>
+
+                        <input
+                            type="date"
+                            class="form-control">
+
+                    </div>
+
+                    <!-- Integrantes -->
+
+                    <div class="col-lg-2">
+
+                        <label class="form-label fw-bold">
+
+                            Integrantes
+
+                        </label>
+
+                        <input
+                            type="number"
+                            class="form-control"
+                            placeholder="1">
+
+                    </div>
+
+                    <!-- Botón -->
+
+                    <div class="col-lg-1 d-grid">
+
+                        <button class="btn btn-warning">
+
+                            Buscar
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+     <!-- ================= BUSCADOR ================= -->
+
+
+
+    <!-- ================= SUPER OFERTAS ================= -->
+
+    <section class="py-5" id="ofertas">
+
+        <div class="container">
+
+            <div class="text-center mb-5">
+
+                <h2 class="fw-bold">Super Ofertas</h2>
+
+            <p class="text-muted">Descubre los destinos más buscados por nuestros viajeros.</p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Card 1 -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="card h-100 shadow border-0">
+
+                    <img src="assets/images/oferta1.jpg" class="card-img-top">
+
+                    <div class="card-body">
+
+                        <span class="badge bg-warning text-dark mb-2">Super Oferta</span>
+
+                        <h5 class="card-title"> Cartagena</h5>
+
+                        <p class="card-text">Disfruta de las mejores playas del Caribe colombiano.</p>
+
+                        <h4 class="text-primary">$799.900</h4>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Card 2 -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="card h-100 shadow border-0">
+
+                    <img src="assets/images/oferta2.jpg" class="card-img-top">
+
+                    <div class="card-body">
+
+                        <span class="badge bg-success"> Más Cotizado</span>
+
+                        <h5 class="mt-2">San Andrés</h5>
+
+                        <p>Mar de los siete colores y hoteles todo incluido.</p>
+
+                        <h4 class="text-primary">$1.199.900</h4>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Card 3 -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="card h-100 shadow border-0">
+
+                    <img src="assets/images/oferta3.jpg" class="card-img-top">
+
+                    <div class="card-body">
+
+                        <span class="badge bg-info">    Relajado</span>
+
+                        <h5 class="mt-2"> Santa Marta</h5>
+
+                        <p> Naturaleza, playas y tranquilidad en un solo lugar.</p>
+
+                        <h4 class="text-primary">$699.900</h4>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Card 4 -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="card h-100 shadow border-0">
+
+                    <img src="assets/images/oferta4.jpg" class="card-img-top">
+
+                    <div class="card-body">
+
+                        <span class="badge bg-danger"> Nuevo Destino </span>
+
+                        <h5 class="mt-2"> Cancún</h5>
+
+                        <p> Vive unas vacaciones inolvidables en México.</p>
+
+                        <h4 class="text-primary">
+                            $2.399.900
+                        </h4>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Card 5 -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="card h-100 shadow border-0">
+
+                    <img src="assets/images/oferta5.jpg" class="card-img-top">
+
+                    <div class="card-body">
+
+                        <span class="badge bg-dark">Más Exclusivo </span>
+
+                        <h5 class="mt-2">
+                            Punta Cana</h5>
+
+                        <p> Resorts de lujo frente al mar Caribe.</p>
+
+                        <h4 class="text-primary">$2.899.900</h4>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Card 6 -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="card h-100 shadow border-0">
+
+                    <img src="assets/images/oferta6.jpg" class="card-img-top">
+
+                        <div class="card-body">
+
+                        <span class="badge bg-primary"> Más Reservado </span>
+
+                        <h5 class="mt-2">Eje Cafetero</h5>
+
+                        <p>Paisajes increíbles y cultura cafetera.</p>
+
+                        <h4 class="text-primary">$899.900</h4>
+
+                        </div>
+
+                    </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+<!-- ================= SUPER OFERTAS ================= -->
+
+<!-- ================= EXPERIENCIAS ================= -->
+
+<section class="py-5 bg-light">
+
+    <div class="container">
+
+        <div class="text-center">
+
+            <h2 class="fw-bold mb-3">
+                Sin necesidad de carro ofrecemos aventuras inolvidables
+            </h2>
+
+            <p class="text-muted mb-5">
+                Tenemos experiencias para todos los gustos.
+            </p>
+
+        </div>
+
+        <div class="row text-center g-4">
+
+            <div class="col">
+                <i class="bi bi-bus-front-fill display-4 text-warning"></i>
+                <h6 class="mt-3">Transporte</h6>
+            </div>
+
+            <div class="col">
+                <i class="bi bi-tree-fill display-4 text-success"></i>
+                <h6 class="mt-3">Naturaleza</h6>
+            </div>
+
+            <div class="col">
+                <i class="bi bi-water display-4 text-info"></i>
+                <h6 class="mt-3">Playa</h6>
+            </div>
+
+            <div class="col">
+                <i class="bi bi-bicycle display-4 text-primary"></i>
+                <h6 class="mt-3">Aventura</h6>
+            </div>
+
+            <div class="col">
+                <i class="bi bi-airplane-engines-fill display-4 text-secondary"></i>
+                <h6 class="mt-3">Vuelos</h6>
+            </div>
+
+            <div class="col">
+                <i class="bi bi-fire display-4 text-danger"></i>
+                <h6 class="mt-3">Experiencias</h6>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ================= EXPERIENCIAS ================= -->
+
+
+<!-- ================= TESTIMONIOS ================= -->
+
+<section class="py-5">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="fw-bold">Lo que dicen nuestros viajeros</h2>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-4">
+
+                <div class="card shadow border-0 h-100">
+
+                    <div class="card-body">
+
+                        <i class="bi bi-person-circle display-4"></i>
+
+                        <h5 class="mt-3">Laura Gómez</h5>
+
+                        <p class="text-warning">★★★★★</p>
+
+                        <p>"Excelente servicio, encontré un viaje a San Andrés mucho más económico de lo que esperaba."</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <div class="card shadow border-0 h-100">
+
+                    <div class="card-body">
+
+                        <i class="bi bi-person-circle display-4"></i>
+
+                        <h5 class="mt-3">Andrés Ruiz</h5>
+
+                        <p class="text-warning">★★★★★</p>
+
+                        <p>"Muy fácil reservar. Todo el proceso fue rápido y seguro."</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <div class="card shadow border-0 h-100">
+
+                    <div class="card-body">
+
+                        <i class="bi bi-person-circle display-4"></i>
+
+                        <h5 class="mt-3">
+                            Camila Torres
+                        </h5>
+
+                        <p class="text-warning">
+                            ★★★★★
+                        </p>
+
+                        <p>
+                            "Las promociones son increíbles. Definitivamente volveré a viajar con Parche Viajero."
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    </section>
+<!-- ================= TESTIMONIOS ================= -->
+
+
+<!-- ================= CONTACTO ================= -->  <!-- este apartado esta redirigir a la persona a la reserva-->
+
+<section class="py-5 bg-warning-subtle">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-6">
+
+                <h2 class="fw-bold">
+                    ¿Listo para tu próxima aventura?
+                </h2>
+
+                <p class="text-muted mt-3">
+                    Encuentra vuelos, hoteles y experiencias al mejor precio.
+                    Nuestro equipo está listo para ayudarte a planear el viaje perfecto.
+                </p>
+
+            </div>
+
+            <div class="col-lg-6 text-lg-end mt-4 mt-lg-0">
+
+                <a href="#" class="btn btn-warning btn-lg px-5">
+                    Reservar Ahora
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ================= CONTACTO ================= -->
+
+<!-- ===================== MEDIOS DE PAGO ===================== -->
+
+<section class="py-5 bg-light">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="fw-bold">
+                Paga como prefieras
+            </h2>
+
+            <p class="text-muted">
+                Aceptamos múltiples medios de pago para hacer tu reserva fácil y segura.
+            </p>
+
+        </div>
+
+        <div id="paymentCarousel" class="carousel slide" data-bs-ride="carousel">
+
+            <div class="carousel-inner">
+
+                <!-- Slide 1 -->
+
+                <div class="carousel-item active">
+
+                    <div class="row justify-content-center align-items-center text-center">
+
+                        <div class="col">
+                            <img src="assets/images/payments/visa.png" class="payment-logo">
+                        </div>
+
+                        <div class="col">
+                            <img src="assets/images/payments/mastercard.png" class="payment-logo">
+                        </div>
+
+                        <div class="col">
+                            <img src="assets/images/payments/amex.png" class="payment-logo">
+                        </div>
+
+                        <div class="col">
+                            <img src="assets/images/payments/nequi.png" class="payment-logo">
+                        </div>
+
+                        <div class="col">
+                            <img src="assets/images/payments/daviplata.png" class="payment-logo">
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Slide 2 -->
+
+                <div class="carousel-item">
+
+                    <div class="row justify-content-center align-items-center text-center">
+
+                        <div class="col">
+                            <img src="assets/images/payments/pse.png" class="payment-logo">
+                        </div>
+
+                        <div class="col">
+                            <img src="assets/images/payments/paypal.png" class="payment-logo">
+                        </div>
+
+                        <div class="col">
+                            <img src="assets/images/payments/applepay.png" class="payment-logo">
+                        </div>
+
+                        <div class="col">
+                            <img src="assets/images/payments/googlepay.png" class="payment-logo">
+                        </div>
+
+                        <div class="col">
+                            <img src="assets/images/payments/mercadopago.png" class="payment-logo">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <button class="carousel-control-prev"
+                type="button"
+                data-bs-target="#paymentCarousel"
+                data-bs-slide="prev">
+
+                <span class="carousel-control-prev-icon"></span>
+
+            </button>
+
+            <button class="carousel-control-next"
+                type="button"
+                data-bs-target="#paymentCarousel"
+                data-bs-slide="next">
+
+                <span class="carousel-control-next-icon"></span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="bg-dark text-white pt-5 pb-3">
+
+    <div class="container">
+
+        <div class="row">
+
+            <!-- Empresa -->
+
+            <div class="col-lg-4 mb-4">
+
+                <h4 class="fw-bold mb-3">
+                    Parche Viajero
+                </h4>
+
+                <p>
+                    Encuentra vuelos económicos, paquetes turísticos,
+                    hospedajes y experiencias inolvidables al mejor precio.
+                </p>
+
+                <div class="d-flex gap-3 fs-4">
+
+                    <a href="#" class="text-white">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+
+                    <a href="#" class="text-white">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+
+                    <a href="#" class="text-white">
+                        <i class="bi bi-twitter-x"></i>
+                    </a>
+
+                    <a href="#" class="text-white">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Navegación -->
+
+            <div class="col-lg-2 mb-4">
+
+                <h5 class="fw-bold mb-3">
+                    Navegación
+                </h5>
+
+                <ul class="list-unstyled">
+
+                    <li class="mb-2">
+                        <a href="#" class="text-decoration-none text-white">
+                            Inicio
+                        </a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a href="#" class="text-decoration-none text-white">
+                            Super Ofertas
+                        </a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a href="#" class="text-decoration-none text-white">
+                            Planes
+                        </a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a href="#" class="text-decoration-none text-white">
+                            Contacto
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- Ayuda -->
+
+            <div class="col-lg-3 mb-4">
+
+                <h5 class="fw-bold mb-3">
+                    Ayuda
+                </h5>
+
+                <ul class="list-unstyled">
+
+                    <li class="mb-2">
+                        Preguntas Frecuentes
+                    </li>
+
+                    <li class="mb-2">
+                        Términos y Condiciones
+                    </li>
+
+                    <li class="mb-2">
+                        Política de Privacidad
+                    </li>
+
+                    <li class="mb-2">
+                        Soporte 24/7
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- Contacto -->
+
+            <div class="col-lg-3 mb-4">
+
+                <h5 class="fw-bold mb-3">
+                    Contacto
+                </h5>
+
+                <p>
+                    <i class="bi bi-geo-alt-fill me-2"></i>
+                    Bogotá, Colombia
+                </p>
+
+                <p>
+                    <i class="bi bi-envelope-fill me-2"></i>
+                    contacto@parcheviajero.com
+                </p>
+
+                <p>
+                    <i class="bi bi-telephone-fill me-2"></i>
+                    +57 300 123 4567
+                </p>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="row align-items-center">
+
+            <div class="col-md-6">
+
+                <p class="mb-0">
+                    © 2026 Parche Viajero. Todos los derechos reservados.
+                </p>
+
+            </div>
+
+            <div class="col-md-6 text-md-end">
+
+                <img src="assets/images/logo.png"
+                    width="45"
+                    alt="Logo">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+<!-- ================= FOOTER ================= -->
+
+<!-- Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
 </body>
 </html>
