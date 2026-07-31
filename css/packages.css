@@ -1,0 +1,111 @@
+/* Paquetes */
+
+
+#products-container{
+    margin-top: 2rem;
+}
+
+
+
+.card{
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: .3s ease;
+}
+    
+
+.card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,.18);
+}
+
+/* IMAGEN */
+
+.card-img-top{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+/* CUERPO */
+
+.card-body{
+    padding: 1.4rem;
+}
+
+.card-title{
+    color: var(--primary-dark);
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: .8rem;
+}
+
+.card-text{
+    color: var(--text-light);
+    font-size: .95rem;
+    line-height: 1.5;
+}
+
+/* BADGE */
+
+.badge{
+    width: fit-content;
+    padding: .45rem .8rem;
+    font-size: .8rem;
+    border-radius: 30px;
+    margin-bottom: 1rem;
+}
+
+/* PRECIO */
+
+.text-success{
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: .8rem;
+}
+
+/* DURACIÓN */
+
+.text-muted{
+    font-size: .9rem;
+}
+
+/* BOTÓN */
+
+.btn-primary{
+
+    background-color: var(--primary);
+
+    border: none;
+
+    border-radius: 10px;
+
+    padding: .8rem;
+
+    font-weight: 600;
+
+    transition: .3s;
+}
+
+.btn-primary:hover{
+
+    background-color: var(--primary-dark);
+
+    transform: scale(1.03);
+
+}
+
+/* RESPONSIVE*/
+
+@media(max-width:768px){
+
+    .card-img-top{
+
+        height:200px;
+
+    }
+
+}
